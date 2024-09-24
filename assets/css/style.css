@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+}
+
+h3.bg-green {
+    line-height: 3rem;
+    border-radius: .6rem;
+    padding: 0 1.5rem;
+}
+
+header,
+footer {
+    width: 100%;
+}
+
+header {
+    height: 4.3rem;
+}
+
+footer {
+    height: 3rem;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "section aside";
+    gap: 1.5rem;
+    margin: 3rem 1rem;
+}
+
+section {
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.bg-green {
+    background: #02A28F;
+    color: #fff;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 81%;
+    max-width: 73rem;
+}
+
+.emphasis {
+    height: 25.5rem;
+    background-image: url(/assets/img/como-e-ser-um-desenvolvedor.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.emphasis:hover a {
+    text-decoration: underline;
+}
+
+.emphasis>a {
+    text-decoration: none;
+    color: #fff;
+    margin: 1.5em;
+}
+
+.emphasis>a:hover {
+    text-decoration: underline #fff;
+}
+
+footer>p {
+    text-align: center;
+    font-weight: 500;
+}
+
+.box-shadow {
+    box-shadow: 0px 10px 10px 0px #0000001A;
+}
+
+.posts-populares>a {
+    text-decoration: none;
+    color: #000;
+}
+
+.posts-populares>a:hover {
+    text-decoration: underline;
+}
+
+.post {
+    display: flex;
+    border-radius: 1rem;
+    padding: .5rem;
+    margin-top: 2.1rem;
+}
+
+.post>div {
+    padding-left: .5rem;
+}
+
+.post>div>h3 {
+    font-size: .9rem;
+    font-weight: 700;
+    padding-bottom: .5rem;
+}
+
+.post>div>p {
+    font-size: .8rem;
+    color: #616161;
+}
+
+.posts-recentes {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1.5rem 0 .7rem 0;
+    border-radius: .5rem;
+}
+
+.posts-recentes>p {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.posts-recentes>a {
+    color: #fff;
+    font-size: .87rem;
+    padding-right: .5rem;
+    line-height: 1.5rem;
+}
+
+.categorias {
+    padding-top: 1.5rem;
+}
+
+.categorias>ul {
+    list-style: none;
+    padding: 0;
+    color: #616161;
+}
+
+.categorias>ul>li {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.categorias>ul>li:hover {
+    cursor: pointer;
+}
+
+.categorias>ul>li::before {
+    content: "> ";
+}
+
+.categorias>ul>li>span {
+    float: right;
+}
+
+.categorias>ul>li>span::before {
+    content: "(";
+}
+
+.categorias>ul>li>span::after {
+    content: ")";
+}
+
+.artigos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+article {
+    border-radius: 1rem;
+    min-width: 100%;
+}
+
+article:hover h3 {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+article>img {
+    width: 100%;
+}
+
+article>div {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+article>div>h3 {
+    padding: .5rem 0;
+    font-size: 1.2rem;
+}
+
+article>div>p {
+    font-size: .9rem;
+}
+
+article>div>p:nth-of-type(1),
+article>div>p:nth-of-type(2),
+article>div>p:nth-of-type(4) {
+    color: #02A28F;
+}
+
+article>div>p:nth-of-type(3) {
+    margin: .5rem 0;
+    font-size: .9rem;
+}
+
+@media (min-width: 320px) and (max-width: 860px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "section"
+            "aside";
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .artigos {
+        grid-template-columns: 1fr;
+    }
+
+    .emphasis {
+        margin-top: -1.5rem;
+        margin-bottom: -.5rem;
+        height: 24.75rem;
+        background-image: url(/assets/img/como-e-ser-um-desenvolvedor-mobile.svg);
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .posts-recentes {
+        padding: .5rem;
+        margin: 1.7rem 0;
+        border-radius: .65rem;
+    }
+
+    h3.bg-green.box-shadow {
+        text-align: center;
+    }
+}
